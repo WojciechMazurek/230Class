@@ -1,28 +1,5 @@
-<html>
-<head>
-  <style>
-    .myDiv {
-      border: 10px outset orange;
-      background-color: lightblue;
-      font-family: sans-serif;
-      font-size: large;
-      text-align: center;
-      border-radius: 100px;
-      padding: 100;
-    }
-  </style>
-</head>
-
-<body>
-  <h1>
-    This is the header before the Div 
-  </h1>
-
-  <div class = "myDiv">
-    <h2><pre>Header inside Div</pre></h2>
-    <p>Text inside Div</p>
-  </div >
-<p>Text outside Div</p>
-
-</body>
-</html>
+<div class ="container-fluid d-flex">
+    <div *ngFor="let product of products">
+        <app-cards img ={{product.img}} [price]='product.price' description={{product.description}} CardTitle={{product.CardTitle}}> loading... </app-cards>
+    </div>
+</div>
