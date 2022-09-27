@@ -7,6 +7,7 @@ import { TopNavbarComponent } from './navigation/top-navbar/top-navbar.component
 import { SecondNavbarComponent } from './navigation/second-navbar/second-navbar.component';
 import { CardsComponent } from './cards/cards.component';
 import { RedCardLayoutComponent } from './layouts/red-card-layout/red-card-layout.component';
+import { HomeComponent } from './layouts/home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RedCardLayoutComponent } from './layouts/red-card-layout/red-card-layou
     TopNavbarComponent,
     SecondNavbarComponent,
     CardsComponent,
-    RedCardLayoutComponent
+    RedCardLayoutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
