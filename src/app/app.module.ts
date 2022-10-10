@@ -8,6 +8,8 @@ import { SecondNavbarComponent } from './navigation/second-navbar/second-navbar.
 import { CardsComponent } from './cards/cards.component';
 import { RedCardLayoutComponent } from './layouts/red-card-layout/red-card-layout.component';
 import { HomeComponent } from './layouts/home/home.component';
+import {HttpClientModule} from '@angular/common/http';
+import { HttpComponent } from './http/http.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { HomeComponent } from './layouts/home/home.component';
     SecondNavbarComponent,
     CardsComponent,
     RedCardLayoutComponent,
-    HomeComponent
+    HomeComponent,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
