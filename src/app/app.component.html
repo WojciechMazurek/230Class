@@ -2,4 +2,13 @@
 
 <app-second-navbar></app-second-navbar>
 
+<div *ngFor="let product of products">
+    <app-cards CardTitle={{product.CardTitle}}
+    description ={{product.description}}
+    [price]="product.price"
+    img = {{product.img}}>
+
+    </app-cards>
+</div>
+
 <router-outlet></router-outlet>
