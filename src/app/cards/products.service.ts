@@ -17,6 +17,10 @@ export class ProductsService{
     getProducts(){
         return this.db.list<ProductItemModel>("products").valueChanges();
     }
+
+    addProduct(product:ProductItemModel){
+        this.db.list<ProductItemModel>("products").push(product);
+    }
     // getProduct(index:number){
     //     return this.db.list<ProductItemModel []>(this.baseUrl + this.productsEndPoint +'/' + index + '.json');
     // }

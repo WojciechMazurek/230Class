@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductItemModel } from '../cards/product-item.model';
+import { ProductsService } from '../cards/products.service';
 
 @Component({
   selector: 'app-add-item',
@@ -8,7 +9,7 @@ import { ProductItemModel } from '../cards/product-item.model';
 })
 export class AddItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ps:ProductsService) { }
 
   ngOnInit(): void {
   }
@@ -16,5 +17,6 @@ export class AddItemComponent implements OnInit {
   addItem(product:ProductItemModel){
     console.log("You Clicked the button");
     console.log(product);
+    this.ps.addProduct(product)
   }
 }
