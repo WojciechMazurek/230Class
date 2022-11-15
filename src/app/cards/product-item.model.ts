@@ -10,7 +10,4 @@ export class ProductItemModel{
         this.CardTitle = CardTitle;
         this.price = price;
        }
-
-       
-
 }
