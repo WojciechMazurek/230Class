@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "target-app-e7920"
+  },
+  "targets": {
+    "target-app-e7920": {
+      "hosting": {
+        "hello-world-app": [
+          "target-app-e7920"
+        ]
+      }
+    }
   }
 }

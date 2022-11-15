@@ -10,6 +10,11 @@ import { RedCardLayoutComponent } from './layouts/red-card-layout/red-card-layou
 import { HomeComponent } from './layouts/home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import { HttpComponent } from './http/http.component';
+import { AddItemComponent } from './add-item/add-item.component';
+import { FormsModule } from '@angular/forms';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore/';
+import { AngularFireModule } from '@angular/fire/compat'; 
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -19,12 +24,17 @@ import { HttpComponent } from './http/http.component';
     CardsComponent,
     RedCardLayoutComponent,
     HomeComponent,
-    HttpComponent
+    HttpComponent,
+    AddItemComponent
   ],
   imports: [
+    // ng add @angular/fire
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
